@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <h3 class="title">
-      <a :href="link">{{ title }}</a>
+      <a :href="fullLink">{{ title }}</a>
     </h3>
     <div class="meta">{{ date }}</div>
     <p class="desc">{{ desc }}</p>
@@ -9,7 +9,18 @@
 </template>
 
 <script setup>
-defineProps(['title', 'date', 'desc', 'link'])
+import { useData } from 'vitepress'
+import { computed } from 'vue'
+
+const props = defineProps(['title', 'date', 'desc', 'link'])
+const { site } = useData()
+
+// 自动拼接 base 路径，支持 GitHub Pages 部署
+const fullLink = computed(() => {
+  // 移除 link 开头的斜杠，避免重复
+  const cleanLink = props.link.replace(/^\//, '')
+  return `${site.value.base}${cleanLink}`
+})
 </script>
 
 <style scoped>
