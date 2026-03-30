@@ -1,6 +1,6 @@
 # 构建 VitePress 站点并部署到 GitHub Pages
 
-name: Deploy VitePress site to Pages
+name: 部署博客
 
 on:
   push:
