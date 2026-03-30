@@ -1,8 +1,7 @@
 import { defineConfig } from 'vitepress'
 
-// 🔴 关键配置：把下面的 /my-tech-blogs/ 换成你的仓库名！
-// 格式必须是 /仓库名/，比如你的仓库叫 my-tech-blogs，就填 /my-tech-blogs/
-const repoName = '/my-tech-blogs/'
+// 🔴 关键配置：GitHub Pages 路径必须是 /仓库名/
+const repoName = '/my-tech-blog/' // 对应仓库 https://github.com/hf-zhangyang/my-tech-blog
 
 // 本地开发使用根路径，生产环境使用仓库名路径
 const base = process.env.NODE_ENV === 'production' ? repoName : '/'
