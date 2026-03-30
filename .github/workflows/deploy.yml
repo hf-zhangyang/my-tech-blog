@@ -1,6 +1,6 @@
 # 构建 VitePress 站点并部署到 GitHub Pages
 
-name: 部署博客
+name: 部署博客工作流
 
 on:
   push:
