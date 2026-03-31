@@ -52,6 +52,11 @@ export const articleList = [
             title: "Gitea 代码仓库搭建1",
             link: "/articles/backend/gitea",
             desc: "Docker 部署、HTTPS 配置与数据备份"
+          },
+          {
+            title: "Gitea 代码仓库搭建3",
+            link: "/articles/backend/gitea",
+            desc: "Docker 部署、HTTPS 配置与数据备份"
           }
         ]
       }
