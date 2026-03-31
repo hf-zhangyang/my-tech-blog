@@ -2,9 +2,9 @@ import { defineConfig } from 'vitepress'
 import { articleList, generateSidebar } from '../articles/articles.js'
 
 // 🔴 关键配置：GitHub Pages 路径必须是 /仓库名/
-// 本地开发使用根路径，生产环境使用仓库名路径
-const isDev = process.env.NODE_ENV !== 'production'
-const base = isDev ? '/' : '/JackBlogs/'
+// 本地开发可以通过 npm run dev 自动使用根路径
+// 生产构建使用 --base 参数或修改此处固定值
+const base = '/JackBlogs/'
 
 export default defineConfig({
   // 网站基础路径（GitHub Pages 必须配置，否则样式会错乱）

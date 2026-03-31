@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev docs",
+    "dev": "vitepress dev docs --base /",
     "build": "vitepress build docs",
-    "preview": "vitepress preview docs"
+    "preview": "vitepress preview docs --base /"
   },
   "repository": {
     "type": "git",
