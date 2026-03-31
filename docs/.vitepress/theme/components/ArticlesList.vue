@@ -52,9 +52,10 @@
 
 <script setup>
 import { articleList } from '../../../articles/articles.js'
+import { withBase } from 'vitepress'
 
 const getFullLink = (link) => {
-  return link.startsWith('/') ? link : `/${link}`
+  return withBase(link.startsWith('/') ? link : `/${link}`)
 }
 
 const scrollToCategory = (categoryId) => {
