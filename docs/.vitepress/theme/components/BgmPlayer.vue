@@ -33,14 +33,9 @@ const audio = ref(null)
 const isPlaying = ref(false)
 const showTooltip = ref(false)
 
-// 创建全局音频元素（只创建一次）
-if (!window.__bgm_audio__) {
-  window.__bgm_audio__ = new Audio('/audio/高山流水 - 纯音乐网.mp3')
-  window.__bgm_audio__.loop = true
-  window.__bgm_audio__.volume = 0.3
-}
-
 const togglePlay = () => {
+  if (typeof window === 'undefined' || !window.__bgm_audio__) return
+
   if (isPlaying.value) {
     window.__bgm_audio__.pause()
     isPlaying.value = false
@@ -51,10 +46,19 @@ const togglePlay = () => {
 }
 
 const syncState = () => {
-  isPlaying.value = !window.__bgm_audio__.paused
+  if (typeof window !== 'undefined' && window.__bgm_audio__) {
+    isPlaying.value = !window.__bgm_audio__.paused
+  }
 }
 
 onMounted(() => {
+  // 只在客户端创建全局音频元素
+  if (typeof window !== 'undefined' && !window.__bgm_audio__) {
+    window.__bgm_audio__ = new Audio('/audio/高山流水 - 纯音乐网.mp3')
+    window.__bgm_audio__.loop = true
+    window.__bgm_audio__.volume = 0.3
+  }
+
   audio.value = window.__bgm_audio__
 
   // 同步播放状态
