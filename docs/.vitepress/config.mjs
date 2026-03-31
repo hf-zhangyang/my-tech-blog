@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { articleList, generateSidebar } from '../articles/articles.js'
 
 // 🔴 关键配置：GitHub Pages 路径必须是 /仓库名/
-const repoName = '/my-tech-blog/' // 对应仓库 https://github.com/hf-zhangyang/my-tech-blog
+const repoName = '/JackBlogs/' // 对应仓库 https://github.com/hf-zhangyang/JackBlogs
 
 // 本地开发使用根路径，生产环境使用仓库名路径
 const base = process.env.NODE_ENV === 'production' ? repoName : '/'
@@ -36,7 +36,7 @@ export default defineConfig({
 
     // 社交链接（GitHub 图标）
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/hf-zhangyang/my-tech-blog.git' }
+      { icon: 'github', link: 'https://github.com/hf-zhangyang/JackBlogs' }
     ],
 
     // 页脚信息

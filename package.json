@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hf-zhangyang/my-tech-blog.git"
+    "url": "git+https://github.com/hf-zhangyang/JackBlogs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/hf-zhangyang/my-tech-blog/issues"
+    "url": "https://github.com/hf-zhangyang/JackBlogs/issues"
   },
-  "homepage": "https://github.com/hf-zhangyang/my-tech-blog#readme",
+  "homepage": "https://github.com/hf-zhangyang/JackBlogs#readme",
   "devDependencies": {
     "vitepress": "^1.6.4"
   }

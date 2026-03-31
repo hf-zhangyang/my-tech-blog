@@ -100,7 +100,7 @@ features:
 在 `docs/.vitepress/config.mjs` 中：
 
 ```javascript
-const repoName = '/my-tech-blog/'  // 必须与仓库名一致
+const repoName = '/JackBlogs/'  // 必须与仓库名一致
 export default defineConfig({
   base: repoName,  // GitHub Pages 部署必须配置
   // ...
