@@ -1,6 +1,6 @@
 <template>
   <div class="hero-section">
-    <img src="/images/hero.jpg" alt="技术博客" />
+    <img :src="withBase('/images/hero.jpg')" alt="技术博客" />
     <div class="poetry-float">
       <p class="poetry-title">天地人</p>
       <p class="poetry-line">三才者，天地人</p>
@@ -13,6 +13,7 @@
 </template>
 
 <script setup>
+import { withBase } from 'vitepress'
 </script>
 
 <style scoped>

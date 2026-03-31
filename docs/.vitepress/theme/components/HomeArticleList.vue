@@ -2,17 +2,17 @@
   <div class="article-section">
     <h2>📜 最新文章</h2>
     <div class="article-list">
-      <a href="/articles/docker/deploy" class="article-card">
+      <a :href="withBase('/articles/docker/deploy')" class="article-card">
         <strong>Docker 容器部署个人服务最佳实践</strong>
         <p class="article-date">2026-03-30</p>
         <p class="article-desc">讲解 Docker 基础镜像优化、数据持久化、网络配置与多服务编排。</p>
       </a>
-      <a href="/articles/backend/gitea" class="article-card">
+      <a :href="withBase('/articles/backend/gitea')" class="article-card">
         <strong>轻量级代码仓库 Gitea 本地搭建教程</strong>
         <p class="article-date">2026-03-28</p>
         <p class="article-desc">Docker 一键部署 Gitea，配置 HTTPS、反向代理与数据备份。</p>
       </a>
-      <a href="/articles/linux/commands" class="article-card">
+      <a :href="withBase('/articles/linux/commands')" class="article-card">
         <strong>Linux 常用高效运维命令合集</strong>
         <p class="article-date">2026-03-25</p>
         <p class="article-desc">日常排查网络、磁盘、进程、日志高频命令，附带单行脚本。</p>
@@ -22,6 +22,7 @@
 </template>
 
 <script setup>
+import { withBase } from 'vitepress'
 </script>
 
 <style scoped>

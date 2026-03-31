@@ -68,7 +68,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useRoute } from 'vitepress'
+import { useRoute, withBase } from 'vitepress'
 import { articleList } from '../../../articles/articles.js'
 
 const route = useRoute()
@@ -88,10 +88,9 @@ const toggleSubcategory = (categoryIndex, subcategoryIndex) => {
   expandedSubcategories.value[key] = !expandedSubcategories.value[key]
 }
 
-// 生成完整链接
+// 生成完整链接（自动处理 base 路径）
 const getFullLink = (link) => {
-  // 开发环境使用根路径
-  return link.startsWith('/') ? link : `/${link}`
+  return withBase(link)
 }
 </script>
 
